@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv2
+spec:
+  capacity:
+    storage: 200Gi
+  accessModes:
+  - ReadWriteOnce
+  nfs:
+    path: /volume1/pv/pv2
+    server: 192.168.1.250
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: generic

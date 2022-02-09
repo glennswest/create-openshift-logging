@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv01 
+spec:
+  capacity:
+    storage: 5Gi 
+  accessModes:
+  - ReadWriteOnce 
+  nfs: 
+    path: /volume1/pv/pv01
+    server: 192.168.1.250
+  persistentVolumeReclaimPolicy: Retain 
+  storageClassName: generic
+
